@@ -1,0 +1,138 @@
+El Programa de Mantenimiento (PM) de \textbf{SKYFILMS} establece los procedimientos, frecuencias e inspecciones requeridas para conservar la aeronavegabilidad continuada de la flota de Sistemas de Aeronaves No Tripuladas (UAS). 
+Su propósito es asegurar que cada aeronave, componente, sistema y equipo auxiliar mantenga su funcionamiento seguro y eficiente durante todo su ciclo operativo, conforme a las especificaciones del fabricante, el RAC 100 y las directrices emitidas por la Aerocivil.
+
+\section{Alcance}
+
+Este programa aplica a todos los UAS registrados ante la Aerocivil, así como a sus sistemas de control remoto, baterías, sensores, cámaras y componentes estructurales o electrónicos que puedan afectar la seguridad operacional.\\
+
+Incluye mantenimiento menor, mayor y correctivo, ejecutado tanto por personal interno como por proveedores aceptados por la organización.
+
+\section{Flota cubierta}
+
+La flota actual cubierta por este Programa de Mantenimiento comprende:
+
+\begin{itemize}
+    \item DJI Mavic 4 Pro
+    \item FPV 5" 6S
+\end{itemize}
+
+\textbf{NOTA:} Cualquier incorporación o retiro de aeronaves requerirá la actualización inmediata de este capítulo y su comunicación a la Aerocivil.
+
+
+\section{Matrices de Mantenimiento por Aeronave}
+A continuación, se establecen las tablas de mantenimiento programado y correctivo para cada modelo operado por SKYFILMS. Las frecuencias indicadas son límites máximos; si las condiciones operacionales (polvo, salinidad, humedad) son adversas, el Técnico UAS deberá reducir estos intervalos.
+
+\subsection{Programa de Mantenimiento: DJI Mavic 4 Pro}
+
+\begin{longtable}{|p{0.15\textwidth}|p{0.34\textwidth}|m{0.15\textwidth}|p{0.15\textwidth}|p{0.15\textwidth}|}
+\hline
+\rowcolor{gray!30} % Encabezado gris
+\textbf{Sistema / Componente} & \textbf{Tarea de Mantenimiento a Ejecutar} & \textbf{Clasificación} & \textbf{Frecuencia / Intervalo} & \textbf{Responsable} \\ \hline
+\endhead
+
+\textbf{Aeronave General} & Inspección Pre-vuelo y Post-vuelo. Revisión visual de fuselaje, brazos, motores y gimbal. & Menor & Cada vuelo & Piloto UAS \\ \hline
+
+\textbf{Hélices y Motores} & Limpieza de polvo/residuos. Verificación de rotación libre, ruidos anómalos en rodamientos y anclajes. & Menor & Cada 10 Horas / Semanal & Técnico UAS \\ \hline
+
+\textbf{Sensores de Visión} & Limpieza de lentes de evasión de obstáculos y sensores infrarrojos con alcohol isopropílico y microfibra. & Menor & Cada 10 Horas / Semanal & Técnico UAS \\ \hline
+
+\textbf{Firmware y Software} & Verificación de actualizaciones de OEM para la aeronave, RC y baterías. Actualización cruzada. & Mayor & Cada 30 Horas / Mensual & Técnico UAS \\ \hline
+
+\textbf{Sistemas de Navegación} & Calibración profunda de la Unidad de Medida Inercial (IMU) y el Magnetómetro (Brújula). & Mayor & Cada 50 Horas o tras traslado $>$ 500 km & Técnico UAS \\ \hline
+
+\textbf{Sistema Propulsivo} & Reemplazo preventivo del set completo de hélices. & Menor & Cada 50 Horas & Técnico UAS \\ \hline
+
+\textbf{Estructura y Motores} & Inspección interna, verificación de fatiga en brazos plegables. Reemplazo de motores/rodamientos si hay holgura excesiva. & Mayor & Cada 200 Horas / Anual & Técnico UAS \\ \hline
+
+\textbf{Motores / ESC / Gimbal / FC} & \textbf{Reemplazo correctivo} por falla reportada en telemetría, sobrecalentamiento, o daño por impacto/FOD. & Correctivo & A condición (Falla) & Técnico UAS \\ \hline
+\end{longtable}
+
+
+
+\subsection{Programa de Mantenimiento: FPV 5" 6S}
+
+\begin{longtable}{|p{0.15\textwidth}|p{0.34\textwidth}|m{0.15\textwidth}|p{0.15\textwidth}|p{0.15\textwidth}|}
+\hline
+\rowcolor{gray!30} % Encabezado gris
+\textbf{Sistema / Componente} & \textbf{Tarea de Mantenimiento a Ejecutar} & \textbf{Clasificación} & \textbf{Frecuencia / Intervalo} & \textbf{Responsable} \\ \hline
+\endhead
+
+\textbf{Aeronave General} & Inspección Pre/Post-vuelo. Verificación visual rápida, ajuste de tuercas de hélices (locknuts) y tensión de batería. & Menor & Cada vuelo & Piloto UAS \\ \hline
+
+\textbf{Motores y Hélices} & Limpieza de residuos (pasto, tierra). Revisión de tuercas de seguridad (cambio si el inserto de nylon está desgastado). & Menor & Diario (Post-operación) & Técnico UAS \\ \hline
+
+\textbf{Electrónica de Control} & Respaldo de configuración CLI en Betaflight. Verificación de tasas de refresco de enlace C2 (ELRS). & Mayor & Cada 20 Horas / Mensual & Técnico UAS \\ \hline
+
+\textbf{Estructura (Paneles)} & Revisión de paneles laterales, limpieza de polvo en el stack. Reemplazo de correas de batería (Kevlar/Velcro) por desgaste. & Menor & Cada 30 Horas & Técnico UAS \\ \hline
+
+\textbf{Cableado y Antenas} & Revisión de continuidad de cables de motor, fijación de antena ELRS (T-Antenna) y VTX. Sustitución de termoencogibles dañados. & Menor & Cada 50 Horas & Técnico UAS \\ \hline
+
+\textbf{Motores y Chasis} & Overhaul de rodamientos. Reemplazo de standoffs y tornillería fatigada. & Mayor & Cada 150 Horas / 6 Meses & Técnico UAS \\ \hline
+
+\textbf{Cualquier Sistema} & \textbf{Reparación correctiva:} Sustitución de componentes posterior a colisión o \textit{crash} inherente a operación FPV. & Correctivo & A condición (Falla) & Técnico UAS \\ \hline
+\end{longtable}
+
+
+\section{Inspecciones Especiales (No Programadas)}
+
+Se define como Inspección Especial a aquella verificación técnica exhaustiva que se realiza de manera inmediata tras la ocurrencia de un evento operacional anómalo. La aeronave pierde su condición de "Aeronavegable" hasta que el Técnico UAS ejecute la inspección y firme la liberación al servicio.
+
+Los eventos que detonan una Inspección Especial Obligatoria son:
+
+\begin{enumerate}
+    \item \textbf{Aterrizaje Fuerte (Hard Landing):} Inspección de tren de aterrizaje, anclajes del gimbal, y fisuras en brazos. Verificación de deformación en el chasis.
+
+    \item \textbf{Impacto de Hélices (Prop Strike):} Reemplazo inmediato de la hélice afectada, inspección del eje del motor para descartar dobleces y prueba de rotación sin vibración.
+
+    \item \textbf{Exposición a Humedad Severa o Lluvia:} Desconexión inmediata de la batería. Secado en ambiente controlado (sílica gel) durante 48 horas. Verificación de sulfatación en conectores y prueba de continuidad en el Flight Controller.
+
+    \item \textbf{Pérdida de Enlace C2 o Retorno de Emergencia:} Descarga de logs de vuelo para análisis de interferencia electromagnética o falla de firmware por parte del Técnico UAS.
+
+    \item \textbf{Impacto con Aves (Bird Strike):} Inspección estructural profunda, limpieza de residuos biológicos (que pueden ser corrosivos) y reemplazo de hélices afectadas.
+\end{enumerate}
+
+\textbf{NOTA:} El registro de todos los mantenimiento realizados a cada UA se registra en el \textbf{Anexo 4 - Libros de Mantenimiento}
+
+\section{Programa de Control y Mantenimiento de Baterías de Vuelo}
+Las baterías son un componente crítico para la seguridad del vuelo. SKYFILMS establece el siguiente protocolo de mantenimiento específico:
+
+
+\begin{itemize}
+    \item \textbf{Rotulación:} Toda batería de SKYFILMS debe estar numerada para su seguimiento en el Libro de Mantenimiento.
+
+    \item \textbf{Balanceo de Celdas:} Todas las cargas deben realizarse en modo Balance. Una diferencia de voltaje mayor a 0.1V entre celdas al finalizar la carga requiere un ciclo de reacondicionamiento. Si persiste, la batería se da de baja.
+
+    \item \textbf{Almacenamiento (Storage):} Si una batería no será utilizada en un plazo mayor a 48 horas, debe ser descargada o cargada al voltaje de almacenamiento técnico (3.8V - 3.85V por celda) utilizando los descargadores controlados del área técnica.
+
+    \item \textbf{Inspección Física (Mensual):} Verificación de hinchamiento (puffing), daños en el conector XT60/XT90, y estado de los cables de balanceo. Baterías con deformaciones físicas severas son retiradas inmediatamente del servicio.
+\end{itemize}
+
+\section{Calibración de Equipos y Herramientas}
+
+Toda herramienta de precisión utilizada por el personal técnico para garantizar las tolerancias del fabricante debe estar controlada.
+
+\begin{itemize}
+    \item Los multímetros, torquímetros y cargadores inteligentes de banco deben recibir verificación metrológica cada 12 meses.
+
+    \item Los certificados de calibración se archivarán en el registro interno de control de herramientas de SKYFILMS.
+
+    \item Herramientas que sufran caídas fuertes o presenten mediciones erráticas deben ser etiquetadas como "NO CONFORME" y retiradas del área.
+\end{itemize}
+
+\section{Gestión de Registros y Retorno al Servicio}
+
+La ejecución de cualquiera de las tareas descritas en las Tablas de Mantenimiento (Menor, Mayor o Correctivo) o las Inspecciones Especiales deberá quedar asentada en el Libro de Mantenimiento del UAS correspondiente, indicando:
+
+\begin{itemize}
+    \item Horas Totales de la Aeronave (TAT).
+
+    \item Descripción detallada del trabajo realizado o la referencia al manual del fabricante (ATA Chapter o equivalente).
+
+    \item Números de parte (P/N) instalados o retirados.
+
+    \item Firma, fecha y sello (o firma digital validada) del Técnico UAS.
+\end{itemize}
+
+Solo tras la firma del registro técnico y el cierre de discrepancias, el Técnico UAS emitirá la condición de Aeronavegable, permitiendo al Jefe de Pilotos programar nuevamente el equipo para operaciones de vuelo.
+
+

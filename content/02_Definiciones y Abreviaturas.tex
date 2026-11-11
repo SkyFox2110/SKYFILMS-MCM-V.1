@@ -1,0 +1,61 @@
+El presente capítulo establece el vocabulario técnico, las definiciones regulatorias y los acrónimos utilizados en el Manual de Control de Mantenimiento (MCM) de SKYFILMS. Su objetivo es garantizar una interpretación estandarizada, precisa y libre de ambigüedades por parte de todo el personal de mantenimiento, operaciones y los inspectores de la Autoridad Aeronáutica, en conformidad con los Reglamentos Aeronáuticos de Colombia (RAC).
+
+\subsection{Abreviaturas y Acrónimos}
+
+\begin{longtable}{|p{0.18\textwidth}|p{0.76\textwidth}|}
+\hline
+\rowcolor{gray!30}
+\textbf{Acrónimo} & \textbf{Significado Oficial} \\ \hline
+\endhead
+
+\textbf{AOC / CDO} & Certificado de Operador Aéreo / Certificado de Explotador de Drones. \\ \hline
+\textbf{BITE} & \textit{Built-In Test Equipment} (Equipo de Prueba Integrado o Autodiagnóstico). \\ \hline
+\textbf{C2} & \textit{Command and Control Link} (Enlace de Mando y Control). \\ \hline
+\textbf{COTS} & \textit{Commercial Off-The-Shelf} (Componentes comerciales de estantería o uso civil). \\ \hline
+\textbf{ESC} & \textit{Electronic Speed Controller} (Controlador Electrónico de Velocidad). \\ \hline
+\textbf{FC} & \textit{Flight Controller} (Controlador de Vuelo / Aviónica). \\ \hline
+\textbf{FOD} & \textit{Foreign Object Debris} (Daño o residuo por Objetos Extraños). \\ \hline
+\textbf{GCS} & \textit{Ground Control Station} (Estación de Control en Tierra). \\ \hline
+\textbf{IMU} & \textit{Inertial Measurement Unit} (Unidad de Medida Inercial). \\ \hline
+\textbf{LLP} & \textit{Life Limited Parts} (Partes o componentes de Vida Límite). \\ \hline
+\textbf{MCM} & Manual de Control de Mantenimiento. \\ \hline
+\textbf{MO} & Manual de Operaciones. \\ \hline
+\textbf{OEM} & \textit{Original Equipment Manufacturer} (Fabricante de Equipo Original). \\ \hline
+\textbf{PIC} & \textit{Pilot In Command} (Piloto al Mando / Piloto UAS). \\ \hline
+\textbf{PM} & Programa de Mantenimiento. \\ \hline
+\textbf{PRE} & Plan de Respuesta ante Emergencias. \\ \hline
+\textbf{RAC} & Reglamentos Aeronáuticos de Colombia. \\ \hline
+\textbf{RPAS / UAS} & \textit{Remotely Piloted Aircraft System / Unmanned Aircraft System} (Sistema de Aeronave No Tripulada). \\ \hline
+\textbf{SMS} & \textit{Safety Management System} (Sistema de Gestión de Seguridad Operacional). \\ \hline
+\textbf{UAEAC} & Unidad Administrativa Especial de Aeronáutica Civil (Aerocivil). \\ \hline
+\textbf{VTX} & \textit{Video Transmitter} (Transmisor de Video). \\ \hline
+\end{longtable}
+
+
+\subsection{Definiciones Técnicas y Regulatorias}
+
+\begin{itemize}
+    \item \textbf{Aeronavegabilidad:} Condición técnica, física y legal en la cual una aeronave o componente se ajusta a su diseño certificado y se encuentra en un estado operativo completamente seguro para el vuelo.
+    
+    \item \textbf{Aeronavegabilidad Continuada:} Conjunto de procesos, inspecciones y tareas de mantenimiento ejecutadas sistemáticamente para garantizar que el Sistema de Aeronave No Tripulada (UAS) se mantenga en condiciones seguras durante toda su vida útil.
+    
+    \item \textbf{Boletín de Servicio (SB - Service Bulletin):} Documento emitido por el fabricante de la aeronave o de un componente (OEM) que detalla modificaciones, inspecciones o actualizaciones de software recomendadas u obligatorias para mantener la seguridad operacional.
+    
+    \item \textbf{Componente de Vida Límite (LLP):} Parte crítica de la aeronave, como las hélices, baterías o motores, que debe ser retirada permanentemente del servicio tras alcanzar un parámetro preestablecido (horas de vuelo, ciclos de carga o meses calendario), sin importar su estado físico aparente.
+    
+    \item \textbf{Hard Time (Tiempo Límite Mandatorio):} Filosofía de mantenimiento preventivo bajo la cual un componente es removido de la aeronave de manera obligatoria al cumplirse un intervalo de tiempo específico (horas, días o ciclos) dictado en el Programa de Mantenimiento.
+    
+    \item \textbf{Liberación de Mantenimiento (Retorno al Servicio):} Certificación técnica registrada en el Libro de Mantenimiento y firmada por el personal autorizado de SKYFILMS, indicando que el trabajo correctivo o preventivo se ha realizado satisfactoriamente y la aeronave es apta para volar.
+    
+    \item \textbf{Mantenimiento Correctivo:} Acción no programada que se efectúa en un UAS o en sus equipos de soporte para aislar y reparar una falla técnica o daño estructural, restableciendo sus condiciones normales de operación.
+    
+    \item \textbf{Mantenimiento Mayor:} Intervención de alta complejidad que implica desensambles profundos, soldadura de componentes electrónicos, modificaciones estructurales en chasis de fibra de carbono o calibraciones profundas de sistemas que exigen herramientas metrológicas.
+    
+    \item \textbf{Mantenimiento Menor:} Tareas preventivas y de baja complejidad ejecutadas en la línea de vuelo, tales como inspección visual, limpieza de motores, actualización cruzada de firmware y reemplazo de partes de rápida instalación (plug-and-play).
+    
+    \item \textbf{Monitoring Condition (Condición Monitoreada):} Filosofía de control y mantenimiento que evalúa la salud de los subsistemas a través del análisis de datos continuos, telemetría, \textit{logs} de vuelo y alertas de los equipos de prueba integrados (BITE).
+    
+    \item \textbf{On Condition (A Condición):} Filosofía de mantenimiento aplicada a componentes que permanecen instalados en la aeronave hasta que una inspección física y funcional demuestre que han superado sus tolerancias de desgaste, momento en el cual son reemplazados.
+    
+    \item \textbf{Overhaul (Reacondicionamiento General):} Proceso técnico mayor que consiste en el desmontaje total, limpieza, inspección rigurosa, reparación y prueba funcional de motores u otros ensambles, restituyéndolos a sus tolerancias originales de fábrica.
+\end{itemize}

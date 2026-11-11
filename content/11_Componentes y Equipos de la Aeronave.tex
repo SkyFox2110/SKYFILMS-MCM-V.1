@@ -1,0 +1,64 @@
+
+El presente capítulo establece las Limitaciones de Aeronavegabilidad y las filosofías de control aplicables a los componentes, subsistemas y equipos asociados a los Sistemas de Aeronaves No Tripuladas (UAS) operados por SKYFILMS. En estricto cumplimiento del RAC 100 y las directrices de la Unidad Administrativa Especial de Aeronáutica Civil (Aerocivil), toda aeronave de la organización debe ser mantenida siguiendo parámetros medibles que aseguren que ningún componente crítico supere sus límites de diseño estructural o funcional.
+
+\subsection{Filosofías de Control de Mantenimiento}
+Para garantizar la aeronavegabilidad continuada de la flota, SKYFILMS clasifica y controla cada uno de los componentes de sus UAS bajo tres filosofías principales de mantenimiento, de acuerdo con los niveles de criticidad y las especificaciones técnicas del fabricante:
+
+\begin{itemize}
+    \item \textbf{On Condition (A Condición):} Se aplica a componentes cuyo desgaste o degradación estructural no sigue un patrón lineal predecible por tiempo. Estos elementos son sometidos a inspecciones visuales, mecánicas o electrónicas exhaustivas antes y después de cada operación. El componente permanece en servicio activo siempre y cuando cumpla satisfactoriamente con las tolerancias, dimensiones y pruebas de funcionalidad especificadas. Su reemplazo o reparación se ejecuta inmediatamente al detectarse una discrepancia técnica.
+    \item \textbf{Monitoring Condition (Condición Monitoreada):} Aplica a sistemas y elementos inteligentes que cuentan con sensores integrados y capacidad de enviar telemetría en tiempo real a la Estación de Control en Tierra (GCS). El estado de estos componentes es evaluado de forma continua mediante el análisis de registros digitales de vuelo (flight logs), alertas del sistema de aviónica, variaciones de voltaje, resistencia interna y reportes del sistema de autodiagnóstico.
+    \item \textbf{Hard Time (Tiempo Límite Mandatorio):} Aplica a componentes críticos para la seguridad del vuelo que poseen una vida útil máxima definida. Al alcanzar el límite establecido, el componente debe ser retirado del servicio de manera obligatoria para su reemplazo o reacondicionamiento general (Overhaul), independientemente de su estado visual o funcional aparente. Este método se controla bajo tres parámetros medibles:
+    
+    \begin{enumerate}
+        \item \textit{\textbf{Ciclos:}} Basado en el número de eventos de activación, descargas eléctricas completas o misiones ejecutadas (aplicable principalmente a baterías y mecanismos de sujeción).
+        \item \textit{\textbf{Horas de Vuelo:}} Tiempo acumulado de operación propulsiva activa en el aire, controlado a través del Libro de Mantenimiento de la Aeronave.
+        \item \textit{\textbf{Tiempo Calendario:}} Intervalos de tiempo cronológico expresados en días, meses o años (aplicable a componentes propensos a degradación por envejecimiento de materiales, adhesivos o agentes ambientales).
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Matrices de Limitaciones de Aeronavegabilidad por Modelo}
+A continuación, se presentan las tablas técnicas estandarizadas que listan los componentes esenciales de cada modelo de aeronave de SKYFILMS, detallando su filosofía de control, el parámetro medible específico y su intervalo límite mandatorio.
+
+\subsubsection{Matriz de Componentes y Equipos: DJI Mavic 4 Pro}
+
+\begin{longtable}{|p{0.22\textwidth}|p{0.25\textwidth}|p{0.23\textwidth}|p{0.24\textwidth}|}
+\hline
+\rowcolor{gray!30}
+\textbf{Componente / Equipo} & \textbf{Filosofía de Control} & \textbf{Parámetro Medible} & \textbf{Intervalo Límite / Acción} \\ \hline
+\endhead
+
+Fuselaje Central y Brazos Plegables & On Condition & Inspección Visual y Mecánica & A condición. Reemplazo ante fisuras o juego en articulaciones. \\ \hline
+Motores Brushless (OEM) & Monitoring Condition & Telemetría / Resistencia de Rotación & Monitoreo diario de temperatura y RPM. Reemplazo por alertas BITE. \\ \hline
+Módulo de Aviónica (IMU, GPS, Compás) & Monitoring Condition & Logs de Vuelo / Calibración del Sistema & Monitoreo permanente de errores de telemetría. Calibración cada 50 horas. \\ \hline
+Hélices de Plástico & Hard Time & Horas de Vuelo & Reemplazo mandatorio a las 50 Horas de vuelo o por muescas estructurales. \\ \hline
+Baterías de Vuelo & Hard Time & Ciclos y Tiempo Calendario & Retiro definitivo a los 150 Ciclos o 30 Meses calendario (lo que ocurra primero). \\ \hline
+Gimbal y Cámara Estabilizada & On Condition & Inspección Funcional / Autodiagnóstico & A condición. Limpieza de lentes pre-vuelo y calibración de software mensual. \\ \hline
+Sensores Ópticos de Evasión & Monitoring Condition & Calibración de Software / Diagnóstico BITE & Monitoreo de alertas en GCS. Calibración obligatoria ante avisos del sistema.
+ \\ \hline
+\end{longtable}
+
+\subsubsection{Matriz de Componentes y Equipos: FPV 5" 6S}
+
+\begin{longtable}{|p{0.22\textwidth}|p{0.25\textwidth}|p{0.23\textwidth}|p{0.24\textwidth}|}
+\hline
+\rowcolor{gray!30}
+\textbf{Componente / Equipo} & \textbf{Filosofía de Control} & \textbf{Parámetro Medible} & \textbf{Intervalo Límite / Acción} \\ \hline
+\endhead
+
+Placas de Fibra de Carbono y Protectores & On Condition & Inspección Visual Post-Impacto & A condición. Reemplazo inmediato si hay fracturas visibles o debilitamiento estructural. \\ \hline
+Motores Brushless & Hard Time & Horas de Vuelo & Reemplazo mandatorio del set de motores a las 550 Horas de vuelo debido a fatiga por altas RPM. \\ \hline
+Hélices Tri-pala de Policarbonato & Hard Time & Horas de Vuelo / Inspección Pre-vuelo & Reemplazo mandatorio a las 50 Horas. Inspección pre-vuelo obligatoria; descarte inmediato si hay dobladuras. \\ \hline
+Módulo Receptor RX (ExpressLRS) & Monitoring Condition & Telemetría RSSI / LQ (Link Quality) & Monitoreo en tiempo real de la calidad de enlace C2. Reemplazo si LQ cae por debajo del 90\%. \\ \hline
+Unidad de Transmisión de Video (VTX) & Monitoring Condition & Temperatura de Operación / Potencia & Monitoreo térmico antes del despegue. Reemplazo ante caídas intermitentes de señal. \\ \hline
+Baterías LiPo 6S & Hard Time & Ciclos de Carga & Retiro mandatorio de la línea de vuelo a los 300 Ciclos por degradación severa de celdas. \\ \hline
+Cableado de Potencia y Conector XT60 & On Condition & Inspección Física / Continuidad & A condición. Reemplazo inmediato ante cables expuestos, fatiga por flexión o sulfatación. \\ \hline
+Cámara FPV (Lente y Sensor) & On Condition & Claridad de Imagen / Ajuste Mecánico & Limpieza diaria del lente. Verificación de torque en el soporte de la cámara antes de operar. \\ \hline
+\end{longtable}
+
+\subsection{11.3. Control de Equipos Asociados en Tierra}
+Los componentes de soporte en tierra que interactúan directamente con la aeronavegabilidad y la seguridad operativa del sistema también quedan integrados bajo este esquema de limitaciones:
+
+\begin{itemize}
+    \item \textbf{Estaciones de Control en Tierra (GCS / Radiocontrol):} Controladas bajo la filosofía \textit{On Condition}. Requieren una verificación funcional obligatoria de potenciómetros y joysticks a través de software cada 100 horas de operación o de forma trimestral.
+    \item \textbf{Cargadores de Baterías Inteligentes:} Controlados bajo la filosofía \textit{Monitoring Condition} a través de sus sistemas internos de diagnóstico térmico y balanceo..
+\end{itemize}

@@ -1,0 +1,292 @@
+\documentclass[12pt,openany]{report}
+
+% ==== Paquetes necesarios (Cargados una sola vez sin duplicados) ====
+\usepackage{tikz}
+\usepackage{afterpage}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\newcounter{pagebeforecert}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e} 
+\usepackage{colortbl}
+\usepackage{adjustbox}
+\usepackage{parskip} % Esto elimina la sangría y justifica de forma limpia
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[table,xcdraw]{xcolor}
+
+% ======================================================================
+% GEOMETRÍA GLOBAL (Márgenes exactos del SMS)
+% ======================================================================
+\usepackage{geometry}
+\geometry{letterpaper, top=4.7cm, bottom=2.1cm, left=2.1cm, right=2.1cm, headheight=50pt, headsep=2.5cm}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Manual de Control de Mantenimiento Skyfilms},
+  pdfauthor={Skyfilms},
+  pdfsubject={RAC 100 - Manual de Control de Mantenimiento},
+  pdfcreator={LaTeX},
+  pdfproducer={Overleaf}
+}
+\usepackage{float}
+\usepackage{longtable, booktabs}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{acronimos}
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{referencias.bib}
+
+% ======================================================================
+% AJUSTE NATIVO DEL ESPACIO EN INICIOS DE CAPÍTULO (Igual al SMS)
+% ======================================================================
+\makeatletter
+% Modificamos la macro original de LaTeX que inserta el espacio en blanco gigante
+\def\@makechapterhead#1{%
+  % El valor original es \vspace*{50\p@}. Lo cambiamos a 0 o negativo para subirlo
+  \vspace*{-20\p@}% <--- ESTE ES EL NÚMERO QUE PUEDES CAMBIAR (ej: -10, -30)
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{-20\p@}% 
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+% ======================================================================
+
+% ======================================================================
+% CONFIGURACIÓN DEL ENCABEZADO INSTITUCIONAL MCM (POSICIÓN CONGELADA)
+% ======================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+% Creamos una "plantilla" única para garantizar que sea 100% idéntico en toda hoja
+\newcommand{\EncabezadoMCM}{%
+    \renewcommand{\arraystretch}{1.6}
+    \begin{tabular}{|m{3.8cm}|m{6.5cm}|m{4.8cm}|}
+        \hline
+        % Limitamos la altura a 2.3cm para que nunca desborde el margen superior
+        \multirow{3}{3.8cm}{\centering \includegraphics[width=3.5cm, height=3.5cm, keepaspectratio]{Imagenes/LOGO.png}} & 
+        \multirow{3}{6.5cm}{\\[0.1cm]\centering \textbf{MANUAL DE CONTROL DE}\\[0.1cm] \textbf{MANTENIMIENTO MCM}} & 
+        \textbf{Versión: 1.0} \\
+        \cline{3-3}
+        & & \textbf{Código: MCM-SKY-001} \\
+        \cline{3-3}
+        & & \textbf{Fecha de Emisión: 23/06/2026} \\
+        \hline
+    \end{tabular}%
+}
+
+% Asignamos la plantilla a las páginas normales del desarrollo
+\fancyhead[C]{\EncabezadoMCM}
+\fancyfoot[R]{\thepage}
+
+% Asignamos EXACTAMENTE la misma plantilla a los inicios de capítulo (\chapter)
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[C]{\EncabezadoMCM}
+    \fancyfoot[R]{\thepage}
+}
+% ======================================================================
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    {\Large \textbf{SKYFILMS}}\\[6pt]
+    {\huge \textbf{Manual de Control de Mantenimiento}}\\[6pt]
+    {\Large \textbf{MCM}}\\[6pt]
+    {\large Cumplimiento RAC 100}\\[12pt]
+    \includegraphics[width=0.6\textwidth]{Imagenes/LOGO.png}\\[16pt]
+    \begin{tabular}{ll}
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    
+        \textbf{Código}: & MCM-SKY-001\\
+        \textbf{Versión}: & 1.0 \\
+            
+    \end{tabular}
+    \vfill
+\end{titlepage}
+
+\chapter*{Lista de Páginas Efectivas}
+\addcontentsline{toc}{chapter}{Lista de Páginas Efectivas}
+\input{content/paginas_efectivas}
+
+\chapter*{Control Manual Enmiendas y Revisiones}
+\addcontentsline{toc}{chapter}{Control Manual Enmiendas y Revisiones}
+\input{content/registro_cambios}
+
+\chapter*{Lista de Distribución}
+\addcontentsline{toc}{chapter}{Lista de Distribución}
+\input{content/lista_distribucion}
+
+\chapter*{Declaración de Cumplimiento}
+\addcontentsline{toc}{chapter}{Declaracion de Cumplimiento}
+\input{content/Declaracion de Cumplimiento}
+
+\tableofcontents
+\clearpage
+
+% Capítulo 1: Información General
+\chapter{Introducción}
+\label{chap:introduccion}
+\input{content/01_introduccion}
+
+% =========================================================================
+% CONTROL DE MÁRGENES ESTÁNDAR POR CAPÍTULO (Igual al SMS)
+% =========================================================================
+
+
+
+% Capítulo 2: Definiciones y Abreviaturas
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Definiciones y Abreviaturas}
+\label{chap:Definiciones y Abreviaturas}
+\input{content/02_Definiciones y Abreviaturas}
+
+% Capítulo 3: Estructura organizacional y responsabilidades
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Estructura Organizacional y Responsabilidades}
+\label{chap:Estructura organizacional y responsabilidades}
+\input{content/03_Estructura organizacional y responsabilidades}
+
+% Capítulo 4: Descripción de las aeronaves UAS
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Descripción de las aeronaves UAS}
+\label{chap:Descripción de las aeronaves UAS}
+\input{content/04_Descripción de las aeronaves UAS}
+
+% Capítulo 5: Instalaciones
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Instalaciones}
+\label{chap:Instalaciones}
+\input{content/05_Instalaciones}
+
+% Capitulo 6: Procedimiento de Selección y Control de Proveedores de Servicios de Mantenimiento
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Procedimiento de Selección y Control de Proveedores de Servicios de Mantenimiento}
+\label{chap:Procedimiento de Selección y Control de Proveedores de Servicios de Mantenimiento}
+\input{content/06_Procedimiento de Selección y Control de Proveedores de Servicios de Mantenimiento}
+
+% Capítulo 7: Equipos Usados en Labores de Mantenimiento
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Equipos Usados en Labores de Mantenimiento}
+\label{chap:Equipos Usados en Labores de Mantenimiento}
+\input{content/07_Equipos Usados en Labores de Mantenimiento}
+
+% Capítulo 8: Reglas de Mantenimiento
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Reglas de Mantenimiento}
+\label{chap:Reglas de Mantenimiento}
+\input{content/08_Reglas de Mantenimiento}
+
+% Capítulo 09: Programa de Mantenimiento (PM)
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Programa de Mantenimiento (PM)}
+\label{chap:Programa de Mantenimiento (PM)}
+\input{content/09_Programa de Mantenimiento (PM)}
+
+% Capítulo 10: Gestion del Libro de Mantenimiento 
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Gestion del Libro de Mantenimiento}
+\label{chap:Gestion del Libro de Mantenimiento }
+\input{content/10_Gestion del Libro de Mantenimiento }
+
+% Capítulo 11: Componentes y Equipos de la Aeronave
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Componentes y Equipos de la Aeronave}
+\label{chap:Componentes y Equipos de la Aeronave}
+\input{content/11_Componentes y Equipos de la Aeronave}
+
+% Capítulo 12: Biblioteca técnica
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Biblioteca técnica}
+\label{chap:Biblioteca técnica}
+\input{content/12_Biblioteca técnica}
+
+% Capítulo 13: Disposición final de componentes y baterías
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Disposición final de componentes y baterías}
+\label{chap:Disposición final de componentes y baterías}
+\input{content/13_Disposición final de componentes y baterías}
+
+% Capítulo 14: Transporte y almacenamiento
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Transporte y almacenamiento de UAS y Baterías}
+\label{chap:Transporte y almacenamiento de UAS}
+\input{content/14_Transporte y almacenamiento de UAS}
+
+% Capítulo 15: Determinación de aeronavegabilidad
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Determinación de aeronavegabilidad}
+\label{chap:Determinación de aeronavegabilidad}
+\input{content/15_Determinación de aeronavegabilidad}
+
+% Capítulo 16: Factores Humanos en el Mantenimiento
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Factores Humanos en el Mantenimiento}
+\label{chap:Factores Humanos en el Mantenimiento}
+\input{content/16_Factores Humanos en el Mantenimiento}
+
+% Capítulo 17: Procedimiento para Mantener la Capacidad Tecnica del Personal
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Procedimiento para Mantener la Capacidad Técnica del Personal}
+\label{chap:Procedimiento para Mantener la Capacidad Tecnica del Personal}
+\input{content/17_Procedimiento para Mantener la Capacidad Tecnica del Personal}
+
+% Capítulo 18: Gestion Documental
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=50pt, headsep=2.0cm}
+\chapter{Gestion Documental}
+\label{chap:Gestion Documental}
+\input{content/18_Gestion Documental}
+
+\restoregeometry
+
+% Apendice: Anexos
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Apéndices}
+
+\begin{itemize}
+    \item \textbf{Anexo 1:} Hoja de Vida UA. 
+    \item \textbf{Anexo 2:} Seguimiento Taller Mantenimiento.
+    \item \textbf{Anexo 3:} Registro de herramientas.
+    \item \textbf{Anexo 4:} Libros de mantenimiento.
+    \item \textbf{Anexo 5:} Disposición Final de Componentes.
+    \item \textbf{Anexo 6:} Control Baterías UAS.
+    \item \textbf{Anexo 7:} Orden de Trabajo Técnico UAS.
+    \item \textbf{Anexo 8:} Reporte de Mantenimiento UA.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,61 @@
+El presente capítulo define la metodología estandarizada por SKYFILMS para establecer, controlar, evaluar y mantener la competencia técnica de todo el personal involucrado en las funciones de mantenimiento de sus Sistemas de Aeronaves No Tripuladas (UAS). En estricto cumplimiento del RAC 100 y las directrices de la Aerocivil, la organización garantiza que ninguna intervención técnica (Menor, Mayor o Correctiva) sea ejecutada por personal que no haya aprobado los programas de instrucción correspondientes y mantenga sus calificaciones vigentes.
+
+\section{Establecimiento y Control de la Competencia Técnica}
+SKYFILMS ejerce el control de competencias a través de un perfil de cargo técnico y una matriz de atribuciones específica. La competencia se valida mediante tres elementos mandatorios:
+
+\begin{enumerate}
+    \item \textbf{Idoneidad Base:} Verificación de títulos académicos (Ingeniería Aeronáutica, Mecánica, Electrónica o carreras afines) o licencias técnicas equivalentes, complementados con las certificaciones de fábrica o cursos específicos para la flota operada.
+    \item \textbf{Evaluación Práctica de Campo:} Todo personal técnico debe superar una prueba práctica supervisada por el instructor asignado, donde demuestre destreza en tareas críticas como torque de tornillería, soldadura aeronáutica de potencia (conectores XT60/XT90), calibración de aviónica (IMU/Compás) y análisis de logs de vuelo.
+\end{enumerate}
+
+\section{Programa de Instrucción Técnica}
+El Programa de Instrucción de SKYFILMS se divide en dos fases mandatorias (Inicial y Recurrente), diseñadas de manera secuencial para asegurar la actualización continua frente a las modificaciones tecnológicas del software, hardware y marcos regulatorios nacionales.
+
+\subsection{Fase 1: Instrucción Inicial}
+Es de carácter obligatorio para todo personal técnico de nuevo ingreso o cuando se incorpore un nuevo modelo de UAS a la flota de la empresa. Debe ser aprobada antes de asignársele cualquier tarea de mantenimiento autónoma. Comprende los siguientes módulos base:
+\begin{itemize}
+    \item \textit{\textbf{Módulo A:} Regulaciones Aeronáuticas (RAC 100, RAC 219) y Manuales Internos (MO, MCM).}.
+    \item \textit{\textbf{Módulo B:} Arquitectura de Hardware, Sistemas Propulsivos y Limitaciones de la Flota SKYFILMS.}
+    \item \textit{\textbf{Módulo C:} Aviónica, Sistemas de Enlace C2 (ExpressLRS/OcuSync) y Estaciones de Control (GCS).} 
+    \item \textit{\textbf{Módulo D:} Procedimientos SMS, Control de Riesgos en Taller, Gestión de Baterías LiPo y Control FOD.}
+\end{itemize}
+
+\subsection{Fase 2: Instrucción Recurrente}
+Tiene como objetivo refrescar los conocimientos técnicos críticos, mitigar la complacencia operativa, analizar las alertas BITE e incidentes técnicos ocurridos en el período anterior, y estudiar los boletines de servicio emitidos por los fabricantes. Se ejecutará de manera cronológica con un intervalo máximo de \textbf{doce (12) meses calendario} para todo el personal autorizado.
+
+A continuación, se detalla la matriz estructurada del plan de estudios del programa de instrucción:
+
+\vspace{0.3cm}
+\begin{longtable}{|p{0.20\textwidth}|p{0.35\textwidth}|p{0.14\textwidth}|p{0.25\textwidth}|}
+\hline
+\rowcolor{gray!30}
+\textbf{Tipo / Nombre del Curso} & \textbf{Contenido Técnico Principal} & \textbf{Frecuencia Mandatoria} & \textbf{Personal Objetivo / Aplicación} \\ \hline
+\endhead
+
+Curso de Inducción e Instrucción Inicial UAS & Filosofías de mantenimiento, RAC 100, arquitectura específica de la flota, control de FOD y gestión de riesgos LiPo. & Única al ingreso o cambio de flota. & Todo el personal técnico y pilotos autorizados para mantenimiento menor. \\ \hline
+
+Curso Recurrente Anual de Mantenimiento & Actualizaciones de firmware, análisis de fallas recurrentes, alertas BITE, técnicas avanzadas de soldadura y calibraciones. & Cada 12 meses calendario. & Técnicos UAS y personal de ingeniería de mantenimiento. \\ \hline
+
+Instrucción Especial por Gestión de Cambios & Estudio de boletines de servicio del fabricante, nuevas directivas de la Aerocivil o modificaciones mayores en el software de control. & A condición (Ante cambios técnicos). & Todo el personal de mantenimiento y operaciones afectado por el cambio. \\ \hline
+
+Entrenamiento en Factores Humanos y SMS & Mitigación del error humano en el taller, fatiga, complacencia, canales de reporte voluntario e investigación de fallas. & Cada 24 meses calendario. & Todo el personal de la Dirección de Mantenimiento de SKYFILMS. \\ \hline
+\end{longtable}
+\vspace{0.3cm}
+
+\subsection{Gestión, Control y Archivo de los Registros de Instrucción}
+Para garantizar la trazabilidad exigida por la autoridad aeronáutica y respaldar la veracidad del programa de instrucción, SKYFILMS implementa de manera mandatoria tres tipos de archivos técnicos independientes, administrados y resguardados por el Gerente General en formato físico y digital duplicado:
+
+\begin{enumerate}
+    \item \textbf{Registro del Personal Encargado de Impartir la Instrucción (Instructores):}
+    SKYFILMS mantiene un listado controlado y actualizado de los instructores calificados (internos o externos). Este archivo debe contener de forma obligatoria el currículum del instructor, soportes académicos, licencias vigentes, certificaciones otorgadas por los fabricantes (OEM) y la autorización expresa firmada por el Gerente General que lo faculta para dictar y evaluar las materias del programa.
+    
+    \item \textbf{Formatos de Respaldo de la Instrucción Dictada:}
+    Toda sesión formativa teórica o práctica ejecutada debe estar respaldada físicamente por los siguientes documentos normalizados bajo el sistema de gestión documental de la empresa:
+    \begin{itemize}
+        \item \textit{\textbf{Listados de Asistencia Mandatorios:}} Formatos indelebles firmados en tinta por cada asistente y por el instructor, detallando la fecha exacta, el lugar y el nombre del módulo.
+        \item \textit{\textbf{Evaluaciones de Competencia:}} Exámenes teóricos escritos o registros de verificación en campo de las pruebas prácticas. La nota mínima aprobatoria exigida por SKYFILMS para validar la competencia es del \textbf{ochenta por ciento (80\%)} de la calificación total.
+    \end{itemize}
+    
+    \item \textbf{Registros de Instrucción Impartida al Personal (Hojas de Vida Técnica):}
+    Cada técnico de mantenimiento de la empresa cuenta con un expediente digitalizado individualizado. En este registro se archiva de manera cronológica cada certificado de curso aprobado (inicial, recurrente o especial), el historial de notas obtenidas, las horas acumuladas de instrucción y el alcance legal de sus atribuciones técnicas. Estos registros se conservarán de forma permanente durante todo el tiempo que el empleado esté vinculado a SKYFILMS, y por un período mínimo de cinco (5) años posterior a su desvinculación, quedando a total disposición de los inspectores de la Aerocivil para auditorías no programadas.
+\end{enumerate}
