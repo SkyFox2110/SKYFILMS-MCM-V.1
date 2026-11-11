@@ -1,6 +1,7 @@
 \documentclass[12pt,openany]{report}
 
 % ==== Paquetes necesarios (Cargados una sola vez sin duplicados) ====
+\usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{afterpage}
 \usepackage[most]{tcolorbox}
@@ -272,21 +273,10 @@
 \label{chap:Gestion Documental}
 \input{content/18_Gestion Documental}
 
+
+% Anexos: formatos de mantenimiento
 \restoregeometry
-
-% Apendice: Anexos
-\chapter*{Anexos}
-\addcontentsline{toc}{chapter}{Apéndices}
-
-\begin{itemize}
-    \item \textbf{Anexo 1:} Hoja de Vida UA. 
-    \item \textbf{Anexo 2:} Seguimiento Taller Mantenimiento.
-    \item \textbf{Anexo 3:} Registro de herramientas.
-    \item \textbf{Anexo 4:} Libros de mantenimiento.
-    \item \textbf{Anexo 5:} Disposición Final de Componentes.
-    \item \textbf{Anexo 6:} Control Baterías UAS.
-    \item \textbf{Anexo 7:} Orden de Trabajo Técnico UAS.
-    \item \textbf{Anexo 8:} Reporte de Mantenimiento UA.
-\end{itemize}
+\input{content/A_anexos}
+\label{LastPage}
 
 \end{document}

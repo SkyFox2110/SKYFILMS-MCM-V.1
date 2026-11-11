@@ -13,7 +13,7 @@ La flota actual cubierta por este Programa de Mantenimiento comprende:
 
 \begin{itemize}
     \item DJI Mavic 4 Pro
-    \item FPV 5" 6S
+    \item BetaFPV Pavo20 Pro II
 \end{itemize}
 
 \textbf{NOTA:} Cualquier incorporación o retiro de aeronaves requerirá la actualización inmediata de este capítulo y su comunicación a la Aerocivil.
@@ -49,29 +49,25 @@ A continuación, se establecen las tablas de mantenimiento programado y correcti
 
 
 
-\subsection{Programa de Mantenimiento: FPV 5" 6S}
-
+\subsection{Programa de Mantenimiento: BetaFPV Pavo20 Pro II}
+Los intervalos de esta matriz son valores propuestos por Skyfilms para una aeronave de 2,2 pulgadas y se validan frente al manual del fabricante y a la experiencia de operación; cualquier ajuste se hace por revisión del MCM.
 \begin{longtable}{|p{0.15\textwidth}|p{0.34\textwidth}|m{0.15\textwidth}|p{0.15\textwidth}|p{0.15\textwidth}|}
 \hline
-\rowcolor{gray!30} % Encabezado gris
+\rowcolor{gray!30}
 \textbf{Sistema / Componente} & \textbf{Tarea de Mantenimiento a Ejecutar} & \textbf{Clasificación} & \textbf{Frecuencia / Intervalo} & \textbf{Responsable} \\ \hline
 \endhead
-
-\textbf{Aeronave General} & Inspección Pre/Post-vuelo. Verificación visual rápida, ajuste de tuercas de hélices (locknuts) y tensión de batería. & Menor & Cada vuelo & Piloto UAS \\ \hline
-
-\textbf{Motores y Hélices} & Limpieza de residuos (pasto, tierra). Revisión de tuercas de seguridad (cambio si el inserto de nylon está desgastado). & Menor & Diario (Post-operación) & Técnico UAS \\ \hline
-
-\textbf{Electrónica de Control} & Respaldo de configuración CLI en Betaflight. Verificación de tasas de refresco de enlace C2 (ELRS). & Mayor & Cada 20 Horas / Mensual & Técnico UAS \\ \hline
-
-\textbf{Estructura (Paneles)} & Revisión de paneles laterales, limpieza de polvo en el stack. Reemplazo de correas de batería (Kevlar/Velcro) por desgaste. & Menor & Cada 30 Horas & Técnico UAS \\ \hline
-
-\textbf{Cableado y Antenas} & Revisión de continuidad de cables de motor, fijación de antena ELRS (T-Antenna) y VTX. Sustitución de termoencogibles dañados. & Menor & Cada 50 Horas & Técnico UAS \\ \hline
-
-\textbf{Motores y Chasis} & Overhaul de rodamientos. Reemplazo de standoffs y tornillería fatigada. & Mayor & Cada 150 Horas / 6 Meses & Técnico UAS \\ \hline
-
-\textbf{Cualquier Sistema} & \textbf{Reparación correctiva:} Sustitución de componentes posterior a colisión o \textit{crash} inherente a operación FPV. & Correctivo & A condición (Falla) & Técnico UAS \\ \hline
+\textbf{Aeronave General} & Inspección pre y postvuelo: estado de ductos y estructura, hélices, tornillería, fijación de la batería y del receptor. & Menor & Cada vuelo & Piloto UAS \\ \hline
+\textbf{Motores y Hélices} & Limpieza de residuos, giro libre de motores y revisión de daños en hélices de tres palas. Reemplazo de hélices con daño visible. & Menor & Cada vuelo / Diario & Técnico UAS \\ \hline
+\textbf{Hélices} & Reemplazo preventivo del juego completo de hélices. & Menor & Cada 10 Horas & Técnico UAS \\ \hline
+\textbf{Electrónica de Control} & Respaldo de la configuración en Betaflight (CLI). Verificación del receptor ELRS XBand, de la calidad de enlace y de la configuración de failsafe. & Mayor & Cada 20 Horas / Mensual & Técnico UAS \\ \hline
+\textbf{GPS externo y rescate} & Verificación de la adquisición de satélites y prueba del rescate por GPS en tierra o en vuelo controlado. & Menor & Cada 20 Horas / Mensual & Técnico UAS \\ \hline
+\textbf{Unidad aérea DJI O4 Pro} & Limpieza de la lente, verificación del enlace con las gafas Goggles 2 y del firmware. & Menor & Mensual & Técnico UAS \\ \hline
+\textbf{Tira LED NightFire} & Verificación de la fijación, del cableado y de que encienda en color blanco fijo, sin efectos. & Menor & Antes de cada vuelo nocturno & Piloto UAS \\ \hline
+\textbf{Estructura y ductos} & Inspección de grietas en el marco y los ductos, y estado de la tornillería y de los amortiguadores. & Menor & Cada 30 Horas & Técnico UAS \\ \hline
+\textbf{Cableado y Antenas} & Continuidad de cables de motor y de batería (conector XT30), fijación de las antenas del receptor y sustitución de termoencogibles dañados. & Menor & Cada 50 Horas & Técnico UAS \\ \hline
+\textbf{Motores} & Verificación de rodamientos y reemplazo del juego de motores por desgaste o vibración. & Mayor & Cada 100 Horas o a condición & Técnico UAS \\ \hline
+\textbf{Cualquier Sistema} & \textbf{Reparación correctiva:} sustitución de componentes posterior a colisión o \textit{crash} propio de la operación FPV. & Correctivo & A condición (Falla) & Técnico UAS \\ \hline
 \end{longtable}
-
 
 \section{Inspecciones Especiales (No Programadas)}
 
@@ -93,7 +89,7 @@ Los eventos que detonan una Inspección Especial Obligatoria son:
 
 \textbf{NOTA:} El registro de todos los mantenimiento realizados a cada UA se registra en el \textbf{Anexo 4 - Libros de Mantenimiento}
 
-\section{Programa de Control y Mantenimiento de Baterías de Vuelo}
+\section{Manejo, Control y Almacenamiento de Baterías de Vuelo}
 Las baterías son un componente crítico para la seguridad del vuelo. SKYFILMS establece el siguiente protocolo de mantenimiento específico:
 
 
@@ -105,6 +101,14 @@ Las baterías son un componente crítico para la seguridad del vuelo. SKYFILMS e
     \item \textbf{Almacenamiento (Storage):} Si una batería no será utilizada en un plazo mayor a 48 horas, debe ser descargada o cargada al voltaje de almacenamiento técnico (3.8V - 3.85V por celda) utilizando los descargadores controlados del área técnica.
 
     \item \textbf{Inspección Física (Mensual):} Verificación de hinchamiento (puffing), daños en el conector XT60/XT90, y estado de los cables de balanceo. Baterías con deformaciones físicas severas son retiradas inmediatamente del servicio.
+\end{itemize}
+
+\section{Control de Software y Firmware}
+\begin{itemize}
+    \item El Técnico UAS verifica mensualmente las actualizaciones del fabricante del firmware de la aeronave, del control y de las baterías, y del software de configuración (DJI Fly, Betaflight Configurator y ExpressLRS Configurator).
+    \item Una actualización no se instala antes de una misión programada: se instala en tierra, se prueba y se registra en el Libro de Mantenimiento con la versión anterior y la nueva.
+    \item La aeronave y su control deben operar con versiones compatibles entre sí. Si el fabricante advierte una incompatibilidad, la aeronave no se libera hasta corregirla.
+    \item El almacenamiento y el transporte de baterías se rigen además por los capítulos de disposición final y de transporte y almacenamiento de este Manual.
 \end{itemize}
 
 \section{Calibración de Equipos y Herramientas}

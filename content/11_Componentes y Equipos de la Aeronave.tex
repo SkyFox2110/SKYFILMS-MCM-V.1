@@ -37,28 +37,27 @@ Sensores Ópticos de Evasión & Monitoring Condition & Calibración de Software 
  \\ \hline
 \end{longtable}
 
-\subsubsection{Matriz de Componentes y Equipos: FPV 5" 6S}
-
+\subsubsection{Matriz de Componentes y Equipos: BetaFPV Pavo20 Pro II}
 \begin{longtable}{|p{0.22\textwidth}|p{0.25\textwidth}|p{0.23\textwidth}|p{0.24\textwidth}|}
 \hline
 \rowcolor{gray!30}
 \textbf{Componente / Equipo} & \textbf{Filosofía de Control} & \textbf{Parámetro Medible} & \textbf{Intervalo Límite / Acción} \\ \hline
 \endhead
-
-Placas de Fibra de Carbono y Protectores & On Condition & Inspección Visual Post-Impacto & A condición. Reemplazo inmediato si hay fracturas visibles o debilitamiento estructural. \\ \hline
-Motores Brushless & Hard Time & Horas de Vuelo & Reemplazo mandatorio del set de motores a las 550 Horas de vuelo debido a fatiga por altas RPM. \\ \hline
-Hélices Tri-pala de Policarbonato & Hard Time & Horas de Vuelo / Inspección Pre-vuelo & Reemplazo mandatorio a las 50 Horas. Inspección pre-vuelo obligatoria; descarte inmediato si hay dobladuras. \\ \hline
-Módulo Receptor RX (ExpressLRS) & Monitoring Condition & Telemetría RSSI / LQ (Link Quality) & Monitoreo en tiempo real de la calidad de enlace C2. Reemplazo si LQ cae por debajo del 90\%. \\ \hline
-Unidad de Transmisión de Video (VTX) & Monitoring Condition & Temperatura de Operación / Potencia & Monitoreo térmico antes del despegue. Reemplazo ante caídas intermitentes de señal. \\ \hline
-Baterías LiPo 6S & Hard Time & Ciclos de Carga & Retiro mandatorio de la línea de vuelo a los 300 Ciclos por degradación severa de celdas. \\ \hline
-Cableado de Potencia y Conector XT60 & On Condition & Inspección Física / Continuidad & A condición. Reemplazo inmediato ante cables expuestos, fatiga por flexión o sulfatación. \\ \hline
-Cámara FPV (Lente y Sensor) & On Condition & Claridad de Imagen / Ajuste Mecánico & Limpieza diaria del lente. Verificación de torque en el soporte de la cámara antes de operar. \\ \hline
+Marco, ductos y protectores & On Condition & Inspección visual postimpacto & A condición. Reemplazo inmediato si hay fracturas o debilitamiento estructural. \\ \hline
+Motores brushless & Hard Time & Horas de vuelo & Reemplazo del juego de motores a las 100 horas de vuelo o antes, ante vibración o rodamientos defectuosos. \\ \hline
+Hélices de tres palas de 2,2 pulgadas & Hard Time & Horas de vuelo / inspección prevuelo & Reemplazo a las 10 horas. Descarte inmediato ante dobladuras o muescas. \\ \hline
+Receptor ELRS XBand & Monitoring Condition & Telemetría RSSI / LQ & Monitoreo en tiempo real de la calidad del enlace C2. Reemplazo si la LQ cae por debajo del 90\,\% en pruebas. \\ \hline
+Unidad aérea DJI O4 Pro & Monitoring Condition & Temperatura / calidad de la señal de video & Monitoreo térmico antes del despegue. Reemplazo ante caídas intermitentes de señal. \\ \hline
+Módulo GPS externo & Monitoring Condition & Satélites adquiridos / rescate por GPS & Verificación antes de cada operación. Reemplazo si no adquiere satélites de forma estable. \\ \hline
+Tira LED NightFire & On Condition & Inspección funcional & Verificación antes de cada vuelo nocturno. Reemplazo ante fallas de encendido. \\ \hline
+Baterías LiPo & Hard Time & Ciclos de carga & Retiro de la línea de vuelo a los 150 ciclos o ante hinchamiento. \\ \hline
+Cableado de potencia y conector XT30 & On Condition & Inspección física / continuidad & A condición. Reemplazo ante cables expuestos o sulfatación. \\ \hline
 \end{longtable}
 
-\subsection{11.3. Control de Equipos Asociados en Tierra}
+\subsection{Control de Equipos Asociados en Tierra}
 Los componentes de soporte en tierra que interactúan directamente con la aeronavegabilidad y la seguridad operativa del sistema también quedan integrados bajo este esquema de limitaciones:
 
 \begin{itemize}
-    \item \textbf{Estaciones de Control en Tierra (GCS / Radiocontrol):} Controladas bajo la filosofía \textit{On Condition}. Requieren una verificación funcional obligatoria de potenciómetros y joysticks a través de software cada 100 horas de operación o de forma trimestral.
+    \item \textbf{Estaciones de Control en Tierra (DJI RC Pro 2, RadioMaster TX16S y gafas DJI Goggles 2):} Controladas bajo la filosofía \textit{On Condition}. Requieren una verificación funcional obligatoria de potenciómetros y joysticks a través de software cada 100 horas de operación o de forma trimestral.
     \item \textbf{Cargadores de Baterías Inteligentes:} Controlados bajo la filosofía \textit{Monitoring Condition} a través de sus sistemas internos de diagnóstico térmico y balanceo..
 \end{itemize}

@@ -1,0 +1,226 @@
+\chapter{Anexos: Formatos de Mantenimiento}
+\label{chap:anexos}
+Este capítulo contiene los formatos controlados del mantenimiento. Los formatos F-004, F-005 y F-007 son los mismos del capítulo de Formatos Operacionales del Manual de Operaciones, con el mismo código y la misma versión; los formatos F-018 a F-022 son propios de este Manual. Todos se diligencian en su totalidad: el espacio sin información se marca \textbf{N/A}. Una copia impresa se considera \textit{copia no controlada}.
+
+\begin{longtable}{|p{1.6cm}|p{5.2cm}|p{1.8cm}|p{5.4cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Anexo} & \textbf{Formato} & \textbf{Código} & \textbf{Quién lo diligencia} \\ \hline
+\endhead
+1 & Hoja de Vida de la Aeronave & F-007 & Jefe de Pilotos UAS / Técnico UAS \\ \hline
+2 & Seguimiento de Mantenimiento en Taller & F-018 & Técnico UAS \\ \hline
+3 & Registro de Herramientas y Equipos & F-019 & Técnico UAS \\ \hline
+4 & Libro de Mantenimiento de la Aeronave & F-020 & Técnico UAS \\ \hline
+5 & Disposición Final de Componentes y Baterías & F-021 & Técnico UAS \\ \hline
+6 & Registro y Control de Baterías & F-004 & Piloto remoto / Técnico UAS \\ \hline
+7 & Reporte de Mantenimiento y Orden de Trabajo & F-005 & Piloto remoto / Técnico UAS \\ \hline
+8 & Reporte de Mantenimiento y Liberación al Servicio & F-022 & Técnico UAS \\ \hline
+\end{longtable}
+
+% --- Macros de formato ---
+\newcommand{\cab}[5]{%
+  \clearpage
+  \section{#1 --- #2}\label{fmt:#1}
+  \renewcommand{\arraystretch}{1.4}
+  \par\noindent\begin{tabularx}{\textwidth}{|l|X|l|X|}
+    \hline
+    \rowcolor[gray]{0.9}\textbf{Código} & #1 & \textbf{Versión} & 1.0 \\ \hline
+    \textbf{Fecha de emisión} & 23/06/2026 & \textbf{Explotador} & Skyfilms S.A.S. \\ \hline
+    \textbf{Diligencia} & #3 & \textbf{Recibe / archiva} & #4 \\ \hline
+    \multicolumn{4}{|p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth}|}{\textbf{Cuándo se usa:} #5} \\ \hline
+  \end{tabularx}
+  \vspace{0.4cm}
+}
+\newcommand{\campos}[1]{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|X|}\hline #1 \end{tabularx}\vspace{0.3cm}
+}
+\newcommand{\caja}[2]{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|}\hline \textbf{#1} \\ \hline \rule{0pt}{#2} \\ \hline \end{tabularx}\vspace{0.3cm}
+}
+\newcommand{\firmas}{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|X|}\hline
+  \textbf{Nombre:} & \textbf{Firma:} \\[0.6cm] \hline \end{tabularx}
+}
+\newcommand{\chk}{$\square$ CHK\ \ $\square$ NO CHK\ \ $\square$ NA}
+\newcommand{\lcitem}[2]{#1 & #2 & \chk \\ \hline}
+\newcommand{\lchead}[1]{\multicolumn{3}{|l|}{\cellcolor[gray]{0.85}\textbf{#1}} \\ \hline}
+\newcommand{\fx}[1]{#1#1#1#1#1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-007}{Hoja de Vida de la Aeronave (Anexo 1)}{Jefe de Pilotos UAS}{Archivo técnico}{Se abre al incorporar la aeronave a la flota y se actualiza después de cada mantenimiento.}
+
+\campos{
+\textbf{Marca / Modelo:} $\square$ DJI Mavic 4 Pro \quad $\square$ BetaFPV Pavo20 Pro II & \textbf{No. de serie:} \\ \hline
+\textbf{No. de registro (RUAS):} & \textbf{Fecha de compra:} \\ \hline
+\textbf{Póliza de responsabilidad y vencimiento:} & \textbf{MTOW (g) / medida D (m):} \\ \hline
+\textbf{Equipos asociados (ETA) y seriales:} & \textbf{Firmware actual:} \\ \hline
+}
+
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.8cm}|p{2.5cm}|X|p{2.5cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Tipo (menor / mayor / correctivo)} & \textbf{Descripción} & \textbf{Taller / técnico} & \textbf{Condición final / F-005} \\ \hline
+\fx{ & & & & \\ \hline } \fx{ & & & & \\ \hline }
+\end{tabularx}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-004}{Registro de Baterías (Anexo 6)}{Piloto remoto / Mantenimiento}{Jefe de Pilotos UAS}{Cada vez que se carga, descarga o usa una batería. Un formato por batería.}
+
+\campos{
+\textbf{Batería No.:} & \textbf{S/N:} \\ \hline
+\textbf{Tipo (LiPo / Li-ion) y capacidad:} & \textbf{Aeronave asignada:} \\ \hline
+\textbf{Fecha de compra:} & \textbf{Ciclos máximos de operación:} \\ \hline
+}
+
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.7cm}|X|p{1.6cm}|p{1.4cm}|p{1.3cm}|X|p{1.6cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Voltaje por celda (V)} & \textbf{Total (V)} & \textbf{Temp. (°C)} & \textbf{Ciclos} & \textbf{Estado físico (hinchada, golpe, normal)} & \textbf{Firma piloto} \\ \hline
+\fx{ & & & & & & \\ \hline } \fx{ & & & & & & \\ \hline }
+\end{tabularx}}
+
+\vspace{0.3cm}
+\textbf{Criterio de retiro:} se retira de servicio y se registra en F-005 toda batería con hinchazón, daño físico, diferencia de voltaje entre celdas superior a 0,1 V, calentamiento anormal o que alcance el máximo de ciclos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-005}{Reporte de Mantenimiento y Orden de Trabajo (Anexo 7)}{Piloto remoto / Técnico}{Jefe de Pilotos UAS}{Ante cualquier falla, golpe, reemplazo de partes o mantenimiento programado, menor, mayor o correctivo, propio o en taller externo.}
+
+\campos{
+\textbf{No. de orden:} & \textbf{Fecha:} \\ \hline
+\textbf{Aeronave / RUAS / serie:} & \textbf{Horas y ciclos acumulados:} \\ \hline
+\textbf{Tipo:} $\square$ Programado \quad $\square$ Correctivo \quad $\square$ Preventivo & \textbf{Lugar:} $\square$ Skyfilms \quad $\square$ Taller externo \\ \hline
+\textbf{Nombre y dirección del taller (si aplica):} & \textbf{Técnico responsable:} \\ \hline
+}
+
+\caja{1. Descripción del evento o falla}{1.8cm}
+\caja{2. Condición de la aeronave (operativa / no operativa)}{1.2cm}
+\caja{3. Trabajo realizado y procedimiento del fabricante aplicado}{2cm}
+
+\begin{tabularx}{\textwidth}{|p{0.8cm}|X|p{3cm}|p{3cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Componente reemplazado} & \textbf{Marca / P/N} & \textbf{Serie nueva} & \textbf{Origen / trazabilidad} \\ \hline
+1 & & & & \\ \hline 2 & & & & \\ \hline 3 & & & & \\ \hline 4 & & & & \\ \hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Disposición final de componentes retirados:} $\square$ Reciclaje \quad $\square$ Residuo especial \quad $\square$ Devolución & \textbf{Prueba posterior y liberación a servicio:} $\square$ Sí \quad $\square$ No \\ \hline
+\textbf{Evidencia fotográfica adjunta:} $\square$ Sí \quad $\square$ No & \textbf{Fecha de próximo mantenimiento:} \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-018}{Seguimiento de Mantenimiento en Taller (Anexo 2)}{Técnico UAS}{Gerente SMS}{Cada vez que una aeronave, un componente o una batería se envía a una organización externa aceptada, y al recibirlo de vuelta.}
+
+\campos{
+\textbf{Organización (Lista de Organizaciones Aceptadas):} & \textbf{Lugar de mantenimiento:} \\ \hline
+\textbf{Aeronave / RUAS / serie:} & \textbf{Orden de trabajo F-005 No.:} \\ \hline
+\textbf{Fecha de envío:} & \textbf{Fecha de recepción:} \\ \hline
+\textbf{Trabajo solicitado:} & \textbf{Trabajo certificado por el taller (documento No.):} \\ \hline
+}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{4.6cm}|p{1.5cm}|p{1.5cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Verificación a la entrega} & \textbf{CHK} & \textbf{NO CHK} & \textbf{Observaciones} \\ \hline
+Los trabajos coinciden con la orden y con el manual del fabricante & $\square$ & $\square$ & \\ \hline
+Repuestos originales o aprobados, con trazabilidad & $\square$ & $\square$ & \\ \hline
+Registros del taller completos y firmados & $\square$ & $\square$ & \\ \hline
+Prueba funcional satisfactoria & $\square$ & $\square$ & \\ \hline
+Aeronave sin daños adicionales & $\square$ & $\square$ & \\ \hline
+\end{tabularx}}
+\vspace{0.3cm}
+\campos{
+\textbf{Evaluación del desempeño del taller:} $\square$ Satisfactorio \quad $\square$ Con observaciones \quad $\square$ No aceptable & \textbf{Acción (revisión del proveedor / auditoría):} \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-019}{Registro de Herramientas y Equipos (Anexo 3)}{Técnico UAS}{Gerente SMS}{Al incorporar una herramienta o equipo de mantenimiento, y al verificarlo, calibrarlo o retirarlo. Se revisa mensualmente.}
+
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.5cm}|X|p{2cm}|p{1.8cm}|p{2.2cm}|p{2.2cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Código} & \textbf{Descripción} & \textbf{Condición} & \textbf{Ubicación} & \textbf{Última calibración} & \textbf{Próxima calibración} & \textbf{Responsable / estado} \\ \hline
+\fx{ & & & & & & \\ \hline } \fx{ & & & & & & \\ \hline }
+\end{tabularx}}
+\vspace{0.3cm}
+\textbf{Reglas:} las herramientas de precisión (multímetros, torquímetros, cargadores de banco) se verifican cada 12 meses y el certificado se archiva; una herramienta que caiga o mida de forma errática se etiqueta \textbf{NO CONFORME} y se retira del área.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-020}{Libro de Mantenimiento de la Aeronave (Anexo 4)}{Técnico UAS}{Gerente SMS}{Un libro por aeronave. Se anota cada inspección, reparación, reemplazo, actualización de software y liberación, el mismo día.}
+
+\textbf{Portada (una por aeronave)}\par\smallskip
+\campos{
+\textbf{Explotador:} Skyfilms S.A.S. & \textbf{Modelo:} $\square$ DJI Mavic 4 Pro \quad $\square$ BetaFPV Pavo20 Pro II \\ \hline
+\textbf{No. de serie:} & \textbf{No. de registro RUAS:} \\ \hline
+\textbf{Fecha de inicio del registro:} & \textbf{No. de control interno del libro:} \\ \hline
+}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.6cm}|p{2.2cm}|p{1.8cm}|X|p{2.2cm}|p{2cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Tipo (menor / mayor / correctivo / software)} & \textbf{Horas totales (TAT)} & \textbf{Trabajo realizado, referencia al manual del fabricante y P/N} & \textbf{F-005 No.} & \textbf{Firma Técnico UAS} \\ \hline
+\fx{ & & & & & \\ \hline } \fx{ & & & & & \\ \hline }
+\end{tabularx}}
+\vspace{0.3cm}
+\campos{
+\textbf{Discrepancias reportadas por pilotos (fecha y descripción):} & \textbf{Estado actual:} $\square$ AERONAVEGABLE \quad $\square$ NO AERONAVEGABLE \\ \hline
+\textbf{Correcciones:} solo con anotación complementaria, firmada y fechada, sin alterar el registro original & \textbf{Revisado por el Gerente SMS (nombre y firma):} \\ \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-021}{Disposición Final de Componentes y Baterías (Anexo 5)}{Técnico UAS}{Gerente SMS}{Cada vez que un componente o una batería se retira definitivamente del servicio.}
+
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.6cm}|X|p{2cm}|p{2.4cm}|p{2.2cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Componente / batería (tipo, P/N, serie)} & \textbf{Aeronave de origen} & \textbf{Motivo y condición (reparable, reutilizable, no aeronavegable)} & \textbf{Destino (reciclaje / RAEE / residuo peligroso)} & \textbf{Gestor autorizado y certificado de entrega No.} \\ \hline
+\fx{ & & & & & \\ \hline } \fx{ & & & & & \\ \hline }
+\end{tabularx}}
+\vspace{0.3cm}
+\campos{
+\textbf{Evidencia fotográfica:} $\square$ Sí \quad $\square$ N/A & \textbf{Batería almacenada en contenedor ignífugo hasta la entrega:} $\square$ Sí \quad $\square$ N/A \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-022}{Reporte de Mantenimiento y Liberación al Servicio (Anexo 8)}{Técnico UAS}{Jefe de Pilotos UAS}{Al terminar cualquier mantenimiento o inspección especial, para declarar la aeronave AERONAVEGABLE o NO AERONAVEGABLE (Certificado de Aeronavegabilidad Operativa).}
+
+\campos{
+\textbf{Aeronave / RUAS / serie:} & \textbf{F-005 No. y fecha:} \\ \hline
+\textbf{Horas y ciclos acumulados:} & \textbf{Software y firmware instalados:} \\ \hline
+}
+\begin{tabularx}{\textwidth}{|X|p{1.5cm}|p{1.8cm}|p{1.5cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Verificación} & \textbf{CHK} & \textbf{NO CHK} & \textbf{NA} \\ \hline
+Tareas del Programa de Mantenimiento completadas & $\square$ & $\square$ & $\square$ \\ \hline
+Configuración original del fabricante, sin modificaciones no aprobadas & $\square$ & $\square$ & $\square$ \\ \hline
+Sin daños, fisuras ni discrepancias abiertas & $\square$ & $\square$ & $\square$ \\ \hline
+Sistemas de fábrica funcionales (luces, sensores, enlace C2, GNSS) & $\square$ & $\square$ & $\square$ \\ \hline
+Prueba funcional o vuelo de comprobación satisfactorio & $\square$ & $\square$ & $\square$ \\ \hline
+Libro de Mantenimiento (F-020) y registros completos y firmados & $\square$ & $\square$ & $\square$ \\ \hline
+Software y firmware compatibles y registrados & $\square$ & $\square$ & $\square$ \\ \hline
+\end{tabularx}
+\vspace{0.3cm}
+\campos{
+\textbf{Determinación final:} $\square$ AERONAVEGABLE \quad $\square$ NO AERONAVEGABLE & \textbf{Discrepancias y acciones correctivas:} \\ \hline
+\textbf{Recibido por el Jefe de Pilotos UAS (nombre y firma):} & \textbf{Fecha de la liberación:} \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Guía de diligenciamiento de los formatos}\label{fmt:guia}
+\renewcommand{\arraystretch}{1.3}
+\textbf{Reglas generales:} letra legible y tinta no borrable o digitación; sin corrector (se corrige con una línea, la firma y la fecha de quien corrige); fecha como día/mes/año; espacio sin dato marcado N/A; el formato se firma el mismo día y se archiva en el Sistema de Gestión Documental dentro de los 3 días hábiles siguientes.
+
+\begin{longtable}{|p{1.7cm}|p{4.3cm}|p{8.5cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Formato} & \textbf{Campo} & \textbf{Cómo se diligencia} \\ \hline
+\endhead
+F-020 & Horas totales (TAT) & Horas de vuelo acumuladas de la aeronave en la fecha del registro, tomadas del F-001. \\ \hline
+F-020 & Trabajo realizado & Qué se hizo, con la referencia exacta del manual del fabricante o de este Manual y los números de parte instalados o retirados. \\ \hline
+F-020 & Estado actual & AERONAVEGABLE solo si existe un F-022 firmado y sin discrepancias abiertas. \\ \hline
+F-018 & Verificación a la entrega & Se marca cada ítem al recibir la aeronave; con un NO CHK, la aeronave no se libera y se informa al Gerente SMS. \\ \hline
+F-019 & Código y calibración & El código es único por herramienta; la fecha de próxima calibración es 12 meses después de la última. \\ \hline
+F-021 & Destino y certificado & Se anota el gestor autorizado y el número del certificado de entrega, que se adjunta al formato. \\ \hline
+F-022 & Determinación final & Se firma solo después de la prueba funcional; la aeronave puede volver a programarse hasta que el Jefe de Pilotos reciba el formato. \\ \hline
+F-004, F-005, F-007 & Todos los campos & Se diligencian con la guía de diligenciamiento del Manual de Operaciones. \\ \hline
+\end{longtable}
+\textbf{Conservación:} los formatos se conservan cinco (5) años; la hoja de vida y el libro de cada aeronave, durante su vida útil y cinco años más.
