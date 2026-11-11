@@ -92,6 +92,28 @@ Este procedimiento permite validar que las correcciones implementadas fueron efi
 
 Este procedimiento garantiza que toda reincorporación se realice bajo control técnico, asegurando la seguridad operacional antes de reanudar vuelos.
 
+\section{Criterios de Aceptación y Rechazo por Modelo}
+Estos criterios sirven para decidir si un componente se acepta, se vigila o se rechaza, y por tanto si la aeronave queda operativa o inoperativa. Son criterios internos de Skyfilms basados en las guías de DJI y BetaFPV; si un fabricante publica un valor distinto, se usa el del fabricante y se actualiza esta tabla.
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{3.9cm}|>{\raggedright\arraybackslash}p{3.4cm}|>{\raggedright\arraybackslash}p{3.4cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Componente} & \textbf{Se acepta si} & \textbf{Se rechaza o se declara inoperativa si} & \textbf{Aplica a} \\ \hline
+\endhead
+Hélices & Sin grietas, golpes, dobleces ni astillas; giran sin rozar & Cualquier grieta, astilladura, doblez o deformación & Ambos modelos \\ \hline
+Motores & Giran libres y sin ruido anormal; en el Pavo20 la resistencia de las bobinas es similar entre motores & Rozamiento, ruido anormal, olor a quemado o, en el Pavo20, una resistencia que difiere más de 10\,\% de los otros motores & Ambos; la medición con multímetro, solo Pavo20 \\ \hline
+Brazos y estructura & Sin fisuras, delaminación de la fibra, holguras ni tornillos flojos & Fisura, delaminación, articulación floja o tornillo que no ajusta & Ambos modelos \\ \hline
+Baterías & Sin hinchamiento, golpes ni cables expuestos; dentro de los ciclos del Programa de Mantenimiento & Cualquier hinchamiento, golpe fuerte, calentamiento anormal, celda desbalanceada o ciclos cumplidos & Ambos modelos \\ \hline
+Gimbal y cámara & Gira libre y sin vibración; autoprueba sin errores & Vibración, atascos o mensaje de error al iniciar & Mavic 4 Pro \\ \hline
+Sensores de visión y obstáculos & Lentes limpios y sin rayones profundos; sin mensajes de calibración & Lente roto o mensaje de sensor con falla que no se corrige & Mavic 4 Pro \\ \hline
+Enlace de control y video & Calidad de enlace (LQ) de 90\,\% o más en la prueba en tierra; video estable & LQ menor a 90\,\%, antenas dañadas o cortes de video en la prueba & Pavo20 Pro II; en el Mavic, enlace estable con DJI RC Pro 2 \\ \hline
+GPS y brújula & Obtiene posición y se calibra sin errores & No obtiene posición o la calibración falla & Ambos modelos \\ \hline
+Cables y conectores & Firmes, sin quemaduras ni oxidación & Cable pelado, conector flojo o quemado & Ambos modelos \\ \hline
+Luces (de fábrica y NightFire) & Encienden y se ven claramente & Una luz que no enciende en una aeronave destinada a vuelo nocturno & Ambos modelos \\ \hline
+Software y firmware & Versiones registradas en el Libro y compatibles con el equipo & Versión no registrada o actualización que falló & Ambos modelos \\ \hline
+\end{longtable}
+
+\textbf{Qué se hace al rechazar:} el Técnico UAS retira el componente, cuelga en la aeronave la etiqueta \textbf{NO VOLAR}, escribe en el F-005 y en el Libro de Mantenimiento (F-020) que la aeronave está \textbf{inoperativa}, y la aeronave no vuela hasta repararla, probarla y liberarla con el F-022. Si el defecto supera lo que el Técnico UAS puede reparar, la aeronave sigue inoperativa hasta que se acepte una organización de mantenimiento (capítulo de proveedores).
+
 \section{Responsabilidades}
 La correcta aplicación de este procedimiento depende del compromiso y la ejecución coordinada del personal técnico.\\
 
